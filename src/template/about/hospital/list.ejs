@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>关于我们_合作医院</title>
+</head>
+<body>
+  <%-include ../../../public/header.ejs%>
+  <%-include ../../../public/nbanner.ejs%>
+  <%-include ../../../public/search.ejs%>
+  <%-include ../../../public/breadcrumb.ejs%>
+  <%-include ../../../public/subnav.ejs%>
+  <!-- 合作医院 -->
+  <div class="l-hospital">
+    <div class="l-container">
+      <ul class="l-hospital__list clearfix">
+        <%Array(12).fill(null).forEach(() => {%>
+        <li class="l-hospital__item">
+          <a class="l-hospital__pic" href="javascript:void(0);">
+            <img src="<%=require('@/assets/hospital-pic.jpg')%>" alt="合作医院" />
+          </a>
+          <a class="l-hospital__label" href="javascript:void(0);">合作医院</a>
+        </li>
+        <%});%>
+      </ul>
+    </div>
+  </div>
+  <%-include ../../../public/footer.ejs%>
+</body>
+</html>

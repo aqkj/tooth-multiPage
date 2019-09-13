@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>关于我们_联系方式</title>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BTrGh2jRlu85oeUCRsmVWj25NpCANrKS"></script>
+</head>
+<body>
+  <%-include ../../../public/header.ejs%>
+  <%-include ../../../public/nbanner.ejs%>
+  <%-include ../../../public/search.ejs%>
+  <%-include ../../../public/breadcrumb.ejs%>
+  <%-include ../../../public/subnav.ejs%>
+  <!-- 联系方式 -->
+  <div class="l-contact">
+    <div class="l-container">
+      <h2 class="l-contact__header">联系方式</h2>
+      <div class="l-contact__main clearfix">
+        <div class="l-contact__info">
+          <h3 class="l-contact__info__title">大同腾屹医疗器械有限公司</h3>
+          <p class="l-contact__info__item l-contact__info__item--hotline">资讯热线：XXXXXXXXXXXX</p>
+          <p class="l-contact__info__item l-contact__info__item--tel">客服电话：XXXXXXXXXXXX</p>
+          <p class="l-contact__info__item l-contact__info__item--fax">联系传真：XXXXXXXXXXXX</p>
+          <p class="l-contact__info__item l-contact__info__item--email">公司邮箱：XXXXXXXXXXXX</p>
+          <p class="l-contact__info__item l-contact__info__item--address">公司地址：XXXXXXXXXXXX</p>
+          <div class="l-contact__info__qrcode">
+            <img src="<%=require('@/assets/contact-qrcode.png')%>" alt="客服微信">
+            客服微信
+          </div>
+        </div>
+        <div class="l-contact__map">
+          <div id="map" class="l-contact__map__el"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%-include ../../../public/footer.ejs%>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/**
+ * 面包屑样式
+ * @author xiaoqiang <465633678@qq.com>
+ * @created 2019/09/06 17:34:46
+ */
+.l-breadcrumb{
+  margin-bottom: 20px;
+  .l-container{
+    border-bottom: 1px dotted #dfdfdf;
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    color: #5e5e5e;
+    word-spacing: 2px;
+    position: relative;
+    padding-left: 19px;
+    &::before{
+      width: 11px;
+      display: block;
+      content: '';
+      height: 20px;
+      background-color: #272623;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -10px;
+    }
+    a{
+      font-size: 14px;
+      color: #5e5e5e;
+    }
+  }
+}

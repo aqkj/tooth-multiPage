@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>定制产品</title>
+</head>
+<body>
+  <%-include ../../public/header.ejs%>
+  <%-include ../../public/nbanner.ejs%>
+  <%-include ../../public/search.ejs%>
+  <%-include ../../public/breadcrumb.ejs%>
+  <!-- 招代理 -->
+  <div class="l-custom">
+    <div class="l-container">
+      <h2 class="l-custom__header">定制产品</h2>
+      <div class="l-custom__title">一、定制产品流程</div>
+      <div class="l-custom__main clearfix">
+        <div class="l-custom__main__left">
+          <img src="<%=require('@/assets/custom-product-pic1.png')%>" alt="定制产品">
+        </div>
+        <div class="l-custom__main__right">
+          <p>产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制</p>
+        </div>
+      </div>
+      <div class="l-custom__list clearfix">
+        <div class="l-custom__item">
+          <div class="l-custom__item__title">01.定制产品定制产品</div>
+          <p class="l-custom__item__content">定制产品定制产品定制产品定制产品定制产品定制产品定制产品</p>
+        </div>
+        <div class="l-custom__item">
+          <div class="l-custom__item__title">01.定制产品定制产品</div>
+          <p class="l-custom__item__content">定制产品定制产品定制产品定制产品定制产品定制产品定制产品</p>
+        </div>
+        <div class="l-custom__item">
+          <div class="l-custom__item__title">01.定制产品定制产品</div>
+          <p class="l-custom__item__content">定制产品定制产品定制产品定制产品定制产品定制产品定制产品</p>
+        </div>
+        <div class="l-custom__item">
+          <div class="l-custom__item__title">01.定制产品定制产品</div>
+          <p class="l-custom__item__content">定制产品定制产品定制产品定制产品定制产品定制产品定制产品</p>
+        </div>
+        <div class="l-custom__item">
+          <div class="l-custom__item__title">01.定制产品定制产品</div>
+          <p class="l-custom__item__content">定制产品定制产品定制产品定制产品定制产品定制产品定制产品</p>
+        </div>
+        <div class="l-custom__item">
+          <div class="l-custom__item__title">01.定制产品定制产品</div>
+          <p class="l-custom__item__content">定制产品定制产品定制产品定制产品定制产品定制产品定制产品</p>
+        </div>
+      </div>  
+      <div class="l-custom__title">二、交付流程</div>
+      <div class="l-custom__main clearfix">
+        <div class="l-custom__main__left">
+          <img src="<%=require('@/assets/custom-product-pic1.png')%>" alt="定制产品">
+        </div>
+        <div class="l-custom__main__right">
+          <p>产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制产品定制</p>
+        </div>
+      </div>
+      <div class="l-custom__list clearfix">
+        <div class="l-custom__item">
+          <div class="l-custom__item__title">01.定制产品定制产品</div>
+          <p class="l-custom__item__content">定制产品定制产品定制产品定制产品定制产品定制产品定制产品</p>
+        </div>
+        <div class="l-custom__item">
+          <div class="l-custom__item__title">01.定制产品定制产品</div>
+          <p class="l-custom__item__content">定制产品定制产品定制产品定制产品定制产品定制产品定制产品</p>
+        </div>
+        <div class="l-custom__item">
+          <div class="l-custom__item__title">01.定制产品定制产品</div>
+          <p class="l-custom__item__content">定制产品定制产品定制产品定制产品定制产品定制产品定制产品</p>
+        </div>
+        <div class="l-custom__item">
+          <div class="l-custom__item__title">01.定制产品定制产品</div>
+          <p class="l-custom__item__content">定制产品定制产品定制产品定制产品定制产品定制产品定制产品</p>
+        </div>
+        <div class="l-custom__item">
+          <div class="l-custom__item__title">01.定制产品定制产品</div>
+          <p class="l-custom__item__content">定制产品定制产品定制产品定制产品定制产品定制产品定制产品</p>
+        </div>
+        <div class="l-custom__item">
+          <div class="l-custom__item__title">01.定制产品定制产品</div>
+          <p class="l-custom__item__content">定制产品定制产品定制产品定制产品定制产品定制产品定制产品</p>
+        </div>
+      </div>
+      <h2 class="l-custom__header">产品案例</h2>
+      <div class="l-custom__products clearfix">
+        <%Array(4).fill(null).forEach(() => {%>
+        <div class="l-custom__products__item">
+          <a class="l-custom__products__pic">
+            <img src="<%=require('@/assets/product-item.png')%>" />
+          </a>
+          <div class="l-custom__products__main">
+            <a class="l-custom__products__title">XXXXXXX</a>
+            <p class="l-custom__products__desc">产品简介简介产品简介简介产品简介简介产品简介简介产品简介简介</p>
+          </div>
+        </div>
+        <%});%>
+      </div>
+    </div>
+    <%-include ../../public/message.ejs%>
+  </div>
+  <%-include ../../public/footer.ejs%>
+</body>
+</html>

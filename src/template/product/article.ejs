@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>产品详情</title>
+</head>
+<body>
+  <%-include ../../public/header.ejs%>
+  <%-include ../../public/nbanner.ejs%>
+  <%-include ../../public/search.ejs%>
+  <%-include ../../public/breadcrumb.ejs%>
+  <!-- 主框架 -->
+  <div class="l-container clearfix">
+    <!-- 左侧导航 -->
+    <div class="l-leftnav">
+      <h2 class="l-leftnav__title">正畸矫正</h2>
+      <div class="l-leftnav__list">
+        <%Array(2).fill(null).forEach(() => {%>
+        <div class="l-leftnav__item">
+          <a class="l-leftnav__item__label" href="javascript:void(0);">产品分类</a>
+          <div class="l-leftnav__item__children">
+            <%Array(5).fill(null).forEach(() => {%>
+            <a class="l-leftnav__item__children__item" href="#">产品分类</a>
+            <%});%>
+          </div>
+        </div>
+        <%});%>
+      </div>
+      <div class="l-leftnav__contact">
+        <span>资讯热线</span>
+        <p>400-000-9261</p>
+      </div>
+    </div>
+    <!-- 右侧容器 -->
+    <div class="l-rightbody">
+      <div class="l-rightbody__title">
+        <span>正畸矫正</span>
+      </div>
+      <div class="l-product">
+        <!-- 产品容器 -->
+        <div class="l-product__wrapper clearfix">
+          <!-- 产品图片 -->
+          <div class="l-product__imgs">
+            <ul class="l-product__imgs__list clearfix">
+              <li class="l-product__imgs__item">
+                <img src="<%=require('@/assets/product-item.png')%>" alt="产品详情"/>
+              </li>
+              <li class="l-product__imgs__item">
+                <img src="<%=require('@/assets/product-item.png')%>" alt="产品详情"/>
+              </li>
+            </ul>
+            <div class="l-product__imgs__tab">
+              <div class="l-product__imgs__tab__item l-product__imgs__tab__item--left"></div>
+              <div class="l-product__imgs__tab__item l-product__imgs__tab__item--right"></div>
+            </div>
+            <div class="l-product__imgs__page">1/1</div>
+          </div>
+          <!-- 产品描述 -->
+          <div class="l-product__main">
+            <h2 class="l-product__title">产品名称</h2>
+            <div class="l-product__info">
+              <p class="l-product__info__item">产品型号: xxxxxx</p>
+              <p class="l-product__info__item">产品型号: xxxxxx</p>
+              <p class="l-product__info__item">产品型号: xxxxxx</p>
+              <p class="l-product__info__item">产品型号: xxxxxx</p>
+              <p class="l-product__info__item">产品型号: xxxxxx</p>
+            </div>
+            <div class="l-product__contact clearfix">
+              <div class="l-product__contact__phone">
+                <span>咨询热线</span>XXXXXXXXXXXXX
+              </div>
+              <button type="button" class="l-product__contact__btn">在线咨询</button>
+            </div>
+          </div>
+        </div>
+        <!-- 产品介绍 -->
+        <div class="l-product__content">
+          <div class="l-product__subtitle">产品介绍</div>
+          <p>产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍</p>
+        </div>
+        <!-- 厂家承诺 -->
+        <div class="l-product__content">
+          <div class="l-product__subtitle">厂家承诺</div>
+          <b>1.严谨的品质控制</b>
+          <p>6道生产工序都必须经过82项厂内质检，检查、试验标准，合格后填写检验记录。打造客户满意的产品，对“零缺陷”持续追求。欧能对设备质量把关十分苛刻，严格的过程控制，只为打造更好的油温机，让客户在使用中得到更好的体验！</p>
+          <b>2.超长的保修期限</b>
+          <p>油温机整机质量保修一年，提供终身售后服务保障。 </p>
+          <b>3.完善的售后服务</b>
+          <p>服务宗旨：专业、快速、周到、准确 </p>
+          <p>服务目标：服务质量达到客户满意。 </p>
+          <p>服务效率：接到售后电话，技术售后人员将在3个小时内给客户详细的电话指导解决方案，如不能消除故障，24小时内准时抵达用户工厂并开始维修！</p>
+          <form class="l-product__form">
+            <div class="l-product__form__item">
+              <span>联系人：</span>
+              <input class="l-product__form__input" type="text">
+            </div>
+            <div class="l-product__form__item">
+              <span>手机：</span>
+              <input class="l-product__form__input" type="text">
+            </div>
+            <div class="l-product__form__item">
+              <span>公司名称：</span>
+              <input class="l-product__form__input" type="text">
+            </div>
+            <div class="l-product__form__item">
+              <span>邮箱：</span>
+              <input class="l-product__form__input" type="text">
+            </div>
+            <div class="l-product__form__item">
+              <span>采购意向：</span>
+              <textarea class="l-product__form__textarea"></textarea>
+            </div>
+            <div class="l-product__form__btn-group">
+              <button type="submit">提交</button>
+              <button type="reset">充填</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%-include ../../public/footer.ejs%>
+</html>

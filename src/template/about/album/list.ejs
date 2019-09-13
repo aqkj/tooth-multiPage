@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>关于我们_企业相册</title>
+</head>
+<body>
+  <%-include ../../../public/header.ejs%>
+  <%-include ../../../public/nbanner.ejs%>
+  <%-include ../../../public/search.ejs%>
+  <%-include ../../../public/breadcrumb.ejs%>
+  <%-include ../../../public/subnav.ejs%>
+  <!-- 荣誉资质 -->
+  <div class="l-album">
+    <div class="l-container">
+      <ul class="l-album__list clearfix">
+        <%Array(12).fill(null).forEach(() => {%>
+        <li class="l-album__item">
+          <a class="l-album__pic" href="javascript:void(0);">
+            <img src="<%=require('@/assets/album-pic.jpg')%>" alt="企业相册" />
+          </a>
+          <a class="l-album__label" href="javascript:void(0);">集体活动</a>
+        </li>
+        <%});%>
+      </ul>
+    </div>
+  </div>
+  <%-include ../../../public/footer.ejs%>
+</body>
+</html>

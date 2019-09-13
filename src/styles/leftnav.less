@@ -1,0 +1,109 @@
+/**
+ * 左右分割样式
+ * @author xiaoqiang <465633678@qq.com>
+ * @created 2019/09/06 17:31:22
+ */
+.l-container{
+  .l-leftnav{
+    width: 241px;
+    float: left;
+    &__title{
+      background-color: #1153a1;
+      color: #fff;
+      text-align: center;
+      font-size: 20px;
+      height: 75px;
+      line-height: 75px;
+      border-bottom: 1px solid #d1deed;
+      // margin-bottom: 1px;
+    }
+    // &__list{}
+    &__item{
+      &__label{
+        color: #5c5c5c;
+        display: block;
+        height: 54px;
+        line-height: 54px;
+        text-indent: 38px;
+        background: url(../assets/leftnav-add.png) no-repeat right center #ececec;
+        margin-bottom: 1px;
+        margin-top: 1px;
+      }
+      &:active, &--active{
+        /* stylelint-disable */
+        .l-leftnav__item__label{
+          background: url(../assets/leftnav-less.png) no-repeat right center #1153a1;
+          color: #fff;
+        }
+        .l-leftnav__item__children{
+          display: block ;
+          height: auto;
+        }
+      }
+      &__children{
+        transition: height .5s ease-in-out;
+        display: none;
+        height: 0;
+        &__item{
+          display: block;
+          height: 50px;
+          background-color: #ececec;
+          color: #5c5c5c;
+          padding-left: 55px;
+          line-height: 50px;
+          position: relative;
+          margin-top: 1px;
+          overflow: hidden;
+          &::after{
+            display: block;
+            content: '';
+            width: 10px;
+            border: 2px solid #ccc;
+            border-left: 0;
+            border-bottom: 0;
+            transform: rotateZ(45deg);
+            height: 10px;
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            margin-top: -5px;
+          }
+        }
+      }
+    }
+    &__contact{
+      background:url(../assets/leftnav-contact.jpg) no-repeat left top / contain;
+      display: block;
+      height: 141px;
+      padding-left: 74px;
+      padding-top: 42px;
+      margin-top: 20px;
+      box-sizing: border-box;
+      span, p{
+        font-size: 18px;
+        display: block;
+      }
+      span{
+        background: url(../assets/leftnav-contact-tel.png) no-repeat left center / contain;
+        text-indent: 25px;
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+    }
+  }
+  .l-rightbody{
+    width: 930px;
+    float: right;
+    &__title{
+      height: 50px;
+      line-height: 50px;
+      border-bottom: 1px solid #ebebeb;
+      color: #666;
+      font-size: 24px;
+      span{
+        border-bottom: 1px solid #262523;
+        display: inline-block;
+      }
+    }
+  }
+}

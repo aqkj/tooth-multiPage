@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>行业资讯_详情</title>
+</head>
+<body>
+  <%-include ../../public/header.ejs%>
+  <%-include ../../public/nbanner.ejs%>
+  <%-include ../../public/search.ejs%>
+  <%-include ../../public/breadcrumb.ejs%>
+  <!-- 主框架 -->
+  <div class="l-container clearfix">
+    <!-- 左侧导航 -->
+    <div class="l-leftnav">
+      <h2 class="l-leftnav__title">腾屹资讯中心</h2>
+      <div class="l-leftnav__list">
+        <%Array(2).fill(null).forEach(() => {%>
+        <div class="l-leftnav__item">
+          <a class="l-leftnav__item__label" href="javascript:void(0);">腾屹新闻</a>
+          <div class="l-leftnav__item__children">
+            <%Array(5).fill(null).forEach(() => {%>
+            <a class="l-leftnav__item__children__item" href="#">腾屹动态</a>
+            <%});%>
+          </div>
+        </div>
+        <%});%>
+      </div>
+      <div class="l-leftnav__contact">
+        <span>资讯热线</span>
+        <p>400-000-9261</p>
+      </div>
+    </div>
+    <!-- 右侧容器 -->
+    <div class="l-rightbody">
+      <div class="l-news">
+        <h2 class="l-news__header">文章详情文章详情文章详情文章详情</h2>
+        <div class="l-news__info">
+          <span>来源：xxxx 发布日期：2019-xx-xx</span>
+          <a href="javascript:history.go(-1);" class="l-news__back">返回列表</a>
+        </div>
+        <div class="l-news__content">
+          文章详情内容
+        </div>
+        <div class="l-news__next clearfix">
+          <span>下一跳</span>
+          <p>xxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+          <a href="javascript:void(0);">
+            查看详情+
+          </a>
+        </div>
+        <div class="l-news__footer">
+          <span>本文标签： 隐形矫正</span>
+          <a href="javascript:history.go(-1);" class="l-news__footer__back">返回列表</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%-include ../../public/footer.ejs%>
+</html>

@@ -1,0 +1,65 @@
+/**
+ * 在线留言
+ * @author xiaoqiang <465633678@qq.com>
+ * @created 2019/09/10 17:19:25
+ */
+.l-message{
+  margin: 40px 0 68px;
+  &__title{
+    width: 145px;
+    height: 46px;
+    line-height: 46px;
+    display: block;
+    background-color: #262523;
+    color: #fff;
+    text-align: center;
+  }
+  &__form{
+    display: block;
+    border: 1px solid #bbb;
+    background: url(../assets/message-bg.jpg) no-repeat center bottom #fff;
+    padding: 40px 15%;
+    &__item{
+      margin-bottom:10px ;
+      font-size: 0;
+      span{
+        display: inline-block;
+        width: 120px;
+        color: #666;
+        vertical-align: top;
+        text-align: right;
+        height: 33px;
+        line-height: 33px;
+        overflow: hidden;
+        font-size: 14px;
+      }
+      input, textarea{
+        width: 73%;
+        margin-right: 10px;
+        outline: none;
+        padding-left: 10px;
+        border: 1px solid #eee;
+        height: 33px;
+        line-height: 32px;
+        color: #666;
+        box-sizing: border-box;
+        box-shadow: none;
+      }
+      textarea{
+        min-height: 100px;
+      }
+    }
+    &__btn{
+      width: 80px;
+      height: 30px;
+      border: 0;
+      text-align: center;
+      margin-right: 30px;
+      margin-left: 120px;
+      color: #fff;
+      padding-left: 0;
+      cursor: pointer;
+      background-color: #2f5596;
+    }
+  }
+}

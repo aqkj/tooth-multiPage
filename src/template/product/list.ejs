@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>正畸矫正</title>
+</head>
+<body>
+  <%-include ../../public/header.ejs%>
+  <%-include ../../public/nbanner.ejs%>
+  <%-include ../../public/search.ejs%>
+  <%-include ../../public/breadcrumb.ejs%>
+  <!-- 主框架 -->
+  <div class="l-container clearfix">
+    <!-- 左侧导航 -->
+    <div class="l-leftnav">
+      <h2 class="l-leftnav__title">正畸矫正</h2>
+      <div class="l-leftnav__list">
+        <%Array(2).fill(null).forEach(() => {%>
+        <div class="l-leftnav__item">
+          <a class="l-leftnav__item__label" href="javascript:void(0);">产品分类</a>
+          <div class="l-leftnav__item__children">
+            <%Array(5).fill(null).forEach(() => {%>
+            <a class="l-leftnav__item__children__item" href="#">产品分类</a>
+            <%});%>
+          </div>
+        </div>
+        <%});%>
+      </div>
+      <div class="l-leftnav__contact">
+        <span>资讯热线</span>
+        <p>400-000-9261</p>
+      </div>
+    </div>
+    <!-- 右侧容器 -->
+    <div class="l-rightbody">
+      <div class="l-rightbody__title">
+        <span>正畸矫正</span>
+      </div>
+      <ul class="l-products clearfix">
+        <%Array(9).fill(5).forEach(() => {%>
+        <li class="l-products__item">
+          <a class="l-products__img" href="/article_product.htm">
+            <img src="<%=require('@/assets/product-item.png')%>" alt="产品"/>
+          </a>
+          <div class="l-products__body">
+            <a class="l-products__title" href="/article_product.htm" alt="产品">XXXXXXXX</a>
+            <p class="l-products__desc">产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介</p>
+          </div>
+        </li>
+        <%})%>
+      </ul>
+    </div>
+  </div>
+  <%-include ../../public/footer.ejs%>
+</html>

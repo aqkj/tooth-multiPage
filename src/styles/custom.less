@@ -1,0 +1,111 @@
+/**
+ * 定制产品
+ * @author xiaoqiang <465633678@qq.com>
+ * @created 2019/09/12 10:03:08
+ */
+.l-custom{
+  &__header{
+    font-size: 29px;
+    color: #383737;
+    line-height: 29px;
+    padding-top: 37px;
+    padding-bottom: 42px;
+    text-align: center;
+  }
+  &__title{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 28px;
+    background-color: #1153a1;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 29px;
+  }
+  &__main{
+    height: 312px;
+    margin-bottom: 20px;
+    &__left{
+      width: 580px;
+      float: left;
+    }
+    &__right{
+      width: 620px;
+      float: left;
+      background-color: #f0f0f0;
+      height: 312px;
+      display: table;
+      p{
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 60px;
+        font-size: 14px;
+        line-height: 28px;
+      }
+    }
+  }
+  &__item{
+    width: 380px;
+    height: 174px;
+    border: 2px solid #ececec;
+    margin-right: 24px;
+    padding: 28px;
+    box-sizing: border-box;
+    float: left;
+    margin-bottom: 24px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &__title{
+      border: 1px solid dotted;
+      color: #1d1d1d;
+      font-size: 18px;
+      padding-bottom: 14px;
+    }
+    &__content{
+      line-height: 30px;
+      font-size: 15px;
+      color: #565656;
+    }
+  }
+  &__products{
+    &__item{
+      width: 290px;
+      margin-right: 9px;
+      border: 1px solid #e3e2e3;
+      float: left;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+    &__pic{
+      height: 290px;
+      width: 100%;
+      display: block;
+      position: relative;
+      background-color: #f9f5fb;
+      img{
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &__main{
+      padding: 18px;
+    }
+    &__title{
+      font-size: 14px;
+      display: block;
+      color: #585858;
+      padding-bottom: 14px;
+    }
+    &__desc{
+      font-size: 14px;
+      line-height: 20px;
+      color: #636363;
+    }
+  }
+}

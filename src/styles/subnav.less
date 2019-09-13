@@ -1,0 +1,49 @@
+/**
+ * 子导航样式
+ * @author xiaoqiang <465633678@qq.com>
+ * @created 2019/09/09 15:43:18
+ */
+.l-subnav{
+  &__item{
+    display: block;
+    float: left;
+    width: 100% / 8;
+    background-color: #f4f4f4;
+    text-align: center;
+    &--active{
+      background-color: #1153a1;
+      position: relative;
+      /* stylelint-disable */
+      .l-subnav__item__link{
+        color: #fff;
+      }
+      &::after{
+        border: 10px solid #fff;
+        border-top:0;
+        border-left-width: 12px;
+        border-left-color: transparent;
+        border-right-width: 12px;
+        border-right-color: transparent;
+        position: absolute;
+        bottom:0;
+        content: '';
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &:last-child{
+      .l-subnav__item__link{
+        border-right: none;
+      }
+    }
+    &__link{
+      color: #333;
+      display: block;
+      height: 56px;
+      line-height: 56px;
+      box-sizing: border-box;
+      border-right: 1px solid #d8d8d8;
+    }
+  }
+}

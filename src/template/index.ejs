@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页</title>
+</head>
+<body>
+  <%-include ../public/header.ejs%>
+  <!-- 轮播图banner -->
+  <div class="c-banner">
+    <ul class="c-banner__list">
+      <li class="c-banner__item">
+        <img class="c-banner__item__img" src="<%=require('@/assets/banner1.png')%>" alt="banner" />
+      </li>
+    </ul>
+    <div class="c-banner__tab">
+      <div class="c-banner__tab__item c-banner__tab__item--active"></div>
+    </div>
+  </div>
+  <%-include ../public/search.ejs%>
+  <!-- 优势 -->
+  <div class="l-advantage">
+    <div class="l-container">
+      <h2 class="l-advantage__header">
+        <strong>智能+节能</strong> 我们始终的坚守
+      </h2>
+      <ul class="l-advantage__list clearfix">
+        <li class="l-advantage__item">
+          <i class="l-advantage__icon"></i>
+          <div class="l-advantage__title">设计中心</div>
+          <p class="l-advantage__content">设立设立设立设立设立设立设立设立设立设立</p>
+        </li>
+        <li class="l-advantage__item">
+          <i class="l-advantage__icon"></i>
+          <div class="l-advantage__title">设计中心</div>
+          <p class="l-advantage__content">设立设立设立设立设立设立设立设立设立设立</p>
+        </li>
+        <li class="l-advantage__item">
+          <i class="l-advantage__icon"></i>
+          <div class="l-advantage__title">设计中心</div>
+          <p class="l-advantage__content">设立设立设立设立设立设立设立设立设立设立</p>
+        </li>
+        <li class="l-advantage__item">
+          <i class="l-advantage__icon"></i>
+          <div class="l-advantage__title">设计中心</div>
+          <p class="l-advantage__content">设立设立设立设立设立设立设立设立设立设立</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 产品中心 -->
+  <div class="l-product">
+    <div class="l-container">
+      <div class="l-container__main">
+        <div class="l-container__header">
+          <h2 class="l-container__title">
+              腾屹产品中心
+          </h2>
+          <p class="l-container__subtitle">按客户需求进行设计与定制生产</p>
+        </div>
+      </div>
+      <ul class="l-product__list clearfix">
+        <li class="l-product__item">
+          <a class="l-product-main">
+            <div class="l-product__img">
+              <img src="<%=require('@/assets/product-item.png')%>"/>
+            </div>
+            <div class="l-product__label">
+              <span>合金矫正器</span>
+              <a class="l-product__link"></a>
+            </div>
+          </a>
+        </li>
+        <li class="l-product__item">
+          <a class="l-product-main">
+            <div class="l-product__img">
+              <img src="<%=require('@/assets/product-item.png')%>"/>
+            </div>
+            <div class="l-product__label">
+              <span>合金矫正器</span>
+              <a class="l-product__link"></a>
+            </div>
+          </a>
+        </li>
+        <li class="l-product__item">
+          <a class="l-product-main">
+            <div class="l-product__img">
+              <img src="<%=require('@/assets/product-item.png')%>"/>
+            </div>
+            <div class="l-product__label">
+              <span>合金矫正器</span>
+              <a class="l-product__link"></a>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 合作客户 -->
+  <div class="l-partner">
+    <div class="l-container">
+      <div class="l-container__main">
+        <div class="l-container__header">
+          <h2 class="l-container__title">
+              合作伙伴
+          </h2>
+          <p class="l-container__subtitle">上万家企业的共同选择</p>
+        </div>
+      </div>
+      <div class="l-partner__main">
+        <!-- 滚动列表 -->
+        <div class="l-partner__content">
+          <ul class="l-partner__list clearfix">
+            <% Array(5).fill(null).forEach(item => {%>
+            <li class="l-partner__item">
+              <img class="l-partner__item__img" src="<%=require('@/assets/partner-logo.png')%>" alt="欧普照明" />
+              <span class="l-partner__item__label">欧普照明</span>
+            </li>
+            <%});%>
+          </ul>
+        </div>
+        <div class="l-partner__tabs">
+          <div class="l-partner__tabs__item l-partner__tabs__item--left"></div>
+          <div class="l-partner__tabs__item l-partner__tabs__item--right"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 定制 -->
+  <div class="l-custom">
+    <div class="l-container">
+      <h2 class="l-custom__header">
+        <strong>私人订制文案</strong> 腾屹客户专属服务
+      </h2>
+      <div class="l-custom__main">
+        <div class="l-custom__item l-custom__item-first">
+          <div class="l-custom__item__header clearfix">
+            <div class="l-custom__item__number">01</div>
+            <div class="l-custom__item__title">
+              <h3>全程病例指导、详细的文字整理方案</h3>
+              <span>Full case guidance, detailed text arrangement</span>
+            </div>
+          </div>
+          <div class="l-custom__item__content">
+            <p class="l-custom__item__content__item">如您在正畸过程中遇到问题，我们的专家团队会及时为您解答，学习的过程中，也能增加收益。</p>
+          </div>
+          <div class="l-custom__item__pic">
+            <img src="<%=require('@/assets/custom-pic1.png')%>" alt="私人订制"/>
+          </div>
+        </div>
+        <div class="l-custom__item l-custom__item-second">
+          <div class="l-custom__item__header clearfix">
+            <div class="l-custom__item__number">02</div>
+            <div class="l-custom__item__title">
+              <h3>不定期举办线上或线下培训</h3>
+              <span>Conduct online or offline training from time to time</span>
+            </div>
+          </div>
+          <div class="l-custom__item__content">
+            <p class="l-custom__item__content__item">一线临床经验丰富的老师授课，手把手教学，边学边实践，让您的理论学习和临床病例完美相结合。</p>
+          </div>
+          <div class="l-custom__item__pic">
+            <img src="<%=require('@/assets/custom-pic4.png')%>" alt="私人订制"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 核心服务 -->
+  <div class="l-service">
+    <div class="l-container">
+      <div class="l-container__main">
+        <div class="l-container__header">
+          <h2 class="l-container__title">
+              腾屹核心服务
+          </h2>
+          <p class="l-container__subtitle">效力为用户提供满意的温控设备解决方案</p>
+        </div>
+      </div>
+      <ul class="l-service__list clearfix">
+        <li class="l-service__item">
+          <img class="l-service__item__img" src="<%=require('@/assets/service-img.png')%>" alt="腾屹核心服务" />
+          <div class="l-service__item__bar"></div>
+          <div class="l-service__item__title">工艺流程诊断</div>
+          <div class="l-service__item__content">专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职。</div>
+        </li>
+        <li class="l-service__item l-service__item--even">
+          <div class="l-service__item__title">工艺流程诊断</div>
+          <div class="l-service__item__content">专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职。</div>
+          <div class="l-service__item__bar"></div>
+          <img class="l-service__item__img" src="<%=require('@/assets/service-img.png')%>" alt="腾屹核心服务" />
+        </li>
+        <li class="l-service__item">
+          <img class="l-service__item__img" src="<%=require('@/assets/service-img.png')%>" alt="腾屹核心服务" />
+          <div class="l-service__item__bar"></div>
+          <div class="l-service__item__title">工艺流程诊断</div>
+          <div class="l-service__item__content">专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职。</div>
+        </li>
+        <li class="l-service__item l-service__item--even">
+          <div class="l-service__item__title">工艺流程诊断</div>
+          <div class="l-service__item__content">专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职。</div>
+          <div class="l-service__item__bar"></div>
+          <img class="l-service__item__img" src="<%=require('@/assets/service-img.png')%>" alt="腾屹核心服务" />
+        </li>
+        <li class="l-service__item">
+          <img class="l-service__item__img" src="<%=require('@/assets/service-img.png')%>" alt="腾屹核心服务" />
+          <div class="l-service__item__bar"></div>
+          <div class="l-service__item__title">工艺流程诊断</div>
+          <div class="l-service__item__content">专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职。</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 咨询我们 -->
+  <div class="l-advisory">
+    <div class="l-advisory__main">
+      <i class="l-advisory__icon"></i>
+      <div class="l-advisory__content">咨询我们 : 
+        <span class="l-advisory__phone">400-000-9261</span>
+      </div>
+    </div>
+  </div>
+  <!-- 资讯 -->
+  <div class="l-infomation">
+    <div class="l-container clearfix">
+      <div class="l-infomation__news">
+        <div class="l-infomation__header clearfix">
+          <i class="l-infomation__header__icon l-infomation__header__icon--news"></i>
+          <div class="l-infomation__header__title">腾屹动态
+            <span>/ news</span>
+          </div>
+        </div>
+        <%Array(3).fill(null).forEach(() => {%>
+        <a class="l-infomation__news__item clearfix">
+          <div class="l-infomation__news__date">
+            <span class="l-infomation__news__date__day">17</span>
+            <span class="l-infomation__news__date__month">2019-11</span>
+          </div>
+          <div class="l-infomation__news__content">
+            <div class="l-infomation__news__title">网站发布了，发布了</div>
+            <p class="l-infomation__news__desc">网站发布了网站发布了网站发布了网站发布了</p>
+          </div>
+        </a>
+        <%});%>
+      </div>
+      <div class="l-infomation__question">
+        <div class="l-infomation__header clearfix">
+          <i class="l-infomation__header__icon l-infomation__header__icon--question"></i>
+          <div class="l-infomation__header__title">常见问题
+            <span>/ faq</span>
+          </div>
+        </div>
+        <img class="l-infomation__question__pic" src="<%=require('@/assets/infomation-question-img.png')%>" />
+        <%Array(2).fill(null).forEach(() => {%>
+        <div class="l-infomation__question__item">
+          <span class="l-infomation__question__icon">Q</span>
+          <div class="l-infomation__question__title">网站发布了网站发布了网站发布了网站发布了</div>
+          <p class="l-infomation__question__desc">网站发布了网站发布了网站发布了网站发布了</p>
+        </div>
+        <%});%>
+      </div>
+    </div>
+  </div>
+  <!-- 资质 -->
+  <div class="l-qualification">
+    <div class="l-container clearfix">
+      <div class="l-qualification__header">资质与专利</div>
+      <div class="l-qualification__main">
+        <ul class="l-qualification__list clearfix">
+          <%Array(8).fill(null).forEach(() => {%>
+          <li class="l-qualification__item">
+            <img src="<%=require('@/assets/qualification-img.png')%>" alt="资质与专利" />
+          </li>
+          <%});%>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <%-include ../public/footer.ejs%>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/**
+ * 联系方式
+ * @author xiaoqiang <465633678@qq.com>
+ * @created 2019/09/10 11:47:55
+ */
+.l-contact{
+  padding-bottom: 124px;
+  overflow: hidden;
+  &__header{
+    padding:44px 0 72px;
+    font-size: 28px;
+    line-height: 28px;
+    color: #2e2d2d;
+    text-align: center;
+  }
+  &__info{
+    width: 404px;
+    float: left;
+    &__title{
+      font-size: 22px;
+      color: #303030;
+      font-weight: bold;
+      padding-bottom: 23px;
+    }
+    &__item{
+      height: 68px;
+      border-bottom: 1px solid #e4e4e4;
+      font-size: 14px;
+      color: #464646;
+      padding-left: 70px;
+      line-height: 68px;
+      background-position: left center;
+      background-repeat: no-repeat;
+      &--hotline{
+        background-image: url(../assets/contact-hotline.png);
+      }
+      &--tel{
+        background-image: url(../assets/contact-tel.png);
+      }
+      &--fax{
+        background-image: url(../assets/contact-fax.png);
+      }
+      &--email{
+        background-image: url(../assets/contact-email.png);
+      }
+      &--address{
+        background-image: url(../assets/contact-address.png);
+      }
+    }
+    &__qrcode{
+      padding-left: 204px;
+      width: 140px;
+      text-align: center;
+      padding-top: 28px;
+      color: #8a8a8a;
+      font-size: 14px;
+      img{
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__map{
+    padding-top:64px;
+    width: 772px;
+    float: right;
+    background: url(../assets/contact-map.png) no-repeat left top;
+    &__el{
+      border: 1px solid #dfdfdf;
+      height: 514px;
+    }
+  }
+}
