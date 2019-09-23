@@ -55,7 +55,7 @@ module.exports = (env, args) => {
         sourceMap: false,
         parallel: true,
       }),
-      new CleanWebpackPlugin(),
+      // new CleanWebpackPlugin(),
       new CopyWebpackPlugin([{
         from: path.resolve(__dirname, '../static'),
         to: path.resolve(__dirname, '../../templets/yiliao/static')
