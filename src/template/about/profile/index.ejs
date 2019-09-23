@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>关于我们_公司简介</title>
+  <title>{dede:field.seotitle /}_{dede:field.title/}_{dede:global.cfg_webname/}</title>
+  <meta name="keywords" content="{dede:field name='keywords'/}" />
+  <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
 </head>
 <body>
   <%-include ../../../public/header.ejs%>
@@ -26,7 +28,9 @@
           </div>
         </div>
         <img class="l-profile__about__pic" src="<%=require('@/assets/profile-pic1.png')%>" alt="关于腾屹"/>
-        <p class="l-profile__about__content">大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司</p>
+        <p class="l-profile__about__content">大同腾屹医疗器械有限公司，是一家专注于正畸耗材研发及生产的公司。我公司以通过不断的科技创新来推动全世界正畸材料的发展为目标。
+            数字化正畸技术，让口腔正畸更加精准高效。
+            </p>
       </div>
       <!-- 腾屹产品实力 -->
       <div class="l-profile__product">
@@ -38,12 +42,19 @@
             <p class="l-container__subtitle">为每一位用户提供专业的解决方案</p>
           </div>
         </div>
-        <p class="l-profile__product__content">大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司</p>
+        <p class="l-profile__product__content">数字化正畸技术，让口腔正畸更加精准高效。</p>
         <img class="l-profile__product__pic" src="<%=require('@/assets/profile-pic2.jpg')%>" alt="腾屹产品实力"/>
-        <p class="l-profile__product__desc">大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司大同腾屹医疗有限公司</p>
+        <p class="l-profile__product__desc">腾屹拥有强大的医师团队，先进的诊疗设备，精准的正畸技术。
+            数字化正畸突破传统口腔正畸技术瓶颈，更加精准、高效，有效缩短矫治周期，实现口腔正畸的私人定制，让患者享受更高端的正畸服务。
+            个性化定制，一人一方案，专家团队技术指导，精细调整每一个阶段，确保每一步操作都以最终矫治结果为目标，提高矫治速率，缩短矫治过程，实现高效矫治。
+            </p>
       </div>
     </div>
   </div>
   <%-include ../../../public/footer.ejs%>
+  <script>
+    var subnavItems = document.querySelectorAll('.l-subnav__item')[0]
+    subnavItems.classList.add('l-subnav__item--active')
+  </script>
 </body>
 </html>

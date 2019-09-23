@@ -3,15 +3,23 @@
   <div class="l-container">
     <div class="l-search__keywords">
       热门关键词：
-      <span>牙托槽</span>
-      <span>牙齿矫正</span>
-      <span>隐形矫正</span>
+      <a href="/plus/search.php?q=牙托槽">牙托槽</a>
+      <a href="/plus/search.php?q=牙齿矫正">牙齿矫正</a>
+      <a href="/plus/search.php?q=隐形矫正">隐形矫正</a>
     </div>
-    <form class="l-search__form">
+    <form class="l-search__form" action="/plus/search.php" method="GET">
       <div class="c-search">
-        <input class="c-search__field" placeholder="请输入关键字" />
-        <i class="c-search__icon"></i>
+        <input class="c-search__field" placeholder="请输入关键字" name="q" />
+        <button type="submit" class="c-search__icon"></button>
       </div>
     </form>
+    <script>
+      var search = document.querySelector('.c-search .c-search__icon'),
+          form = document.querySelector('.l-search__form');
+      console.log(search)
+      search.addEventListener('click', function(e) {
+        console.log(form)
+      })
+    </script>
   </div>
 </div>

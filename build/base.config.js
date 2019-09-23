@@ -46,13 +46,22 @@ const config =  {
       test: /.ts$/,
       include: /src/,
       use: [
+        {
+          loader: '@zouzhiqiang/prevent-loader',
+          options: {
+            hosts: [
+              'localhost',
+              'su12366.com'
+            ]
+          }
+        },
         'ts-loader'
       ]
     }, {
-      test: /.ejs/,
+      test: /.ejs$/,
       include: /src/,
       use: [
-        'ejs2-loader'
+        '@zouzhiqiang/ejs-loader'
       ]
     }, {
       test: /\.(png|jp?g|gif|svg)$/,
@@ -72,14 +81,20 @@ const config =  {
       "@": path.resolve(__dirname, '../src')
     }
   },
-  plugins: []
+  plugins: [],
+  stats: {
+    all: false,
+    builtAt: true,
+    errors: true,
+    env: true
+  }
 }
 // 生成html
 config.plugins = config.plugins.concat(Object.keys(entrys).map((key) => (
   new HtmlWebpackPlugin({
     filename: `${key}.htm`,
     template: entrys[key].replace(path.extname(entrys[key]), '.ejs'),
-    chunks: [key]
+    chunks: [key, 'commons', 'vendor']
   })
 )))
 module.exports = config

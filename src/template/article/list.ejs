@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{dede:field.seotitle /}_{dede:field.title/}_{dede:global.cfg_webname/}</title>
+  <meta name="keywords" content="{dede:field name='keywords'/}" />
+  <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+</head>
+<body>
+  <%-include ../../public/header.ejs%>
+  <%-include ../../public/nbanner.ejs%>
+  <%-include ../../public/search.ejs%>
+  <%-include ../../public/breadcrumb.ejs%>
+  <!-- 主框架 -->
+  <div class="l-container clearfix">
+    <!-- 左侧导航 -->
+    <div class="l-leftnav">
+      <h2 class="l-leftnav__title">腾屹资讯中心</h2>
+      <div class="l-leftnav__list">
+        {dede:channelartlist typeid="5"}
+        <div class="l-leftnav__item" data-id="{dede:field.id/}">
+          <a class="l-leftnav__item__label" href="{dede:field.typeurl/}">{dede:field.typename/}</a>
+          <div class="l-leftnav__item__children">
+            {dede:channelarttlist}
+            <a class="l-leftnav__item__children__item" href="{dede:field.typeurl/}" data-id="{dede:field.id/}">{dede:field.typename/}</a>
+            {/dede:channelarttlist}
+          </div>
+        </div>
+        {/dede:channelartlist}
+      </div>
+      <div class="l-leftnav__contact">
+        <span>资讯热线</span>
+        <p>{dede:global.tel_one/}</p>
+      </div>
+    </div>
+    <!-- 右侧容器 -->
+    <div class="l-rightbody">
+      <ul class="l-news clearfix">
+        {dede:list row="9" titlelen='200' infolen='200' }
+        <li class="l-news__item clearfix">
+          <a class="l-news__img" href="[field:arcurl/]">
+            <img src="<%=require('@/assets/product-item.png')%>" alt="产品"/>
+          </a>
+          <div class="l-news__body">
+            <a class="l-news__title" href="[field:arcurl/]" alt="产品">[field:title/]</a>
+            <p class="l-news__desc">[field:description/]</p>
+            <a class="l-news__btn" href="[field:arcurl/]">了解详情</a>
+          </div>
+        </li>
+        {/dede:list}
+      </ul>
+      <ul class="page-list">
+        {dede:pagelist listsize=5 listitem="next,pre,end,index,info,pageno"/}
+      </ul>
+    </div>
+  </div>
+  <%-include ../../public/footer.ejs%>
+  <script src="/templets/yiliao/static/jquery.min.js"></script>
+</html>

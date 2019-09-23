@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>关于我们_联系方式</title>
+  <title>{dede:field.seotitle /}_{dede:field.title/}_{dede:global.cfg_webname/}</title>
+  <meta name="keywords" content="{dede:field name='keywords'/}" />
+  <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BTrGh2jRlu85oeUCRsmVWj25NpCANrKS"></script>
 </head>
 <body>
@@ -13,6 +15,7 @@
   <%-include ../../../public/search.ejs%>
   <%-include ../../../public/breadcrumb.ejs%>
   <%-include ../../../public/subnav.ejs%>
+  <input id="address" type="hidden" value="{dede:global.address/}" />
   <!-- 联系方式 -->
   <div class="l-contact">
     <div class="l-container">
@@ -20,13 +23,13 @@
       <div class="l-contact__main clearfix">
         <div class="l-contact__info">
           <h3 class="l-contact__info__title">大同腾屹医疗器械有限公司</h3>
-          <p class="l-contact__info__item l-contact__info__item--hotline">资讯热线：XXXXXXXXXXXX</p>
-          <p class="l-contact__info__item l-contact__info__item--tel">客服电话：XXXXXXXXXXXX</p>
-          <p class="l-contact__info__item l-contact__info__item--fax">联系传真：XXXXXXXXXXXX</p>
-          <p class="l-contact__info__item l-contact__info__item--email">公司邮箱：XXXXXXXXXXXX</p>
-          <p class="l-contact__info__item l-contact__info__item--address">公司地址：XXXXXXXXXXXX</p>
+          <p class="l-contact__info__item l-contact__info__item--hotline">资讯热线：{dede:global.tel_one/}</p>
+          <p class="l-contact__info__item l-contact__info__item--tel">客服电话：{dede:global.tel_three/}</p>
+          <p class="l-contact__info__item l-contact__info__item--fax">联系传真：{dede:global.fax/}</p>
+          <p class="l-contact__info__item l-contact__info__item--email">公司邮箱：{dede:global.email/}</p>
+          <p class="l-contact__info__item l-contact__info__item--address">公司地址：{dede:global.address/}</p>
           <div class="l-contact__info__qrcode">
-            <img src="<%=require('@/assets/contact-qrcode.png')%>" alt="客服微信">
+            <img src="<%=require('@/assets/contact-qrcode.png')%>" width="100%" alt="客服微信">
             客服微信
           </div>
         </div>
@@ -37,5 +40,9 @@
     </div>
   </div>
   <%-include ../../../public/footer.ejs%>
+  <script>
+    var subnavItems = document.querySelectorAll('.l-subnav__item')[6]
+    subnavItems.classList.add('l-subnav__item--active')
+  </script>
 </body>
 </html>

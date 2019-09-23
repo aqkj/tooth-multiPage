@@ -75,20 +75,20 @@
       &__item{
         display: block;
         float: left;
-        width: 147px;
+        width: 133px;
         padding: 18px 0;
         height: 50px;
         box-sizing: border-box;
         color: #3c3f36;
         text-align: center;
         font-size: 14px;
-        &--active{
+        transition: all .3s ease-in-out;
+        &:hover, &--active{
           background-color: #1153a1;
           color: #fff;
           /* stylelint-disable */
           .c-nav__icon{
             background:url(../assets/icon-home-active.png) no-repeat center / contain;
-            margin-right: 6px;
           }
         }
       }
@@ -100,6 +100,7 @@
         vertical-align: top;
         position: relative;
         bottom: 3px;
+        margin-right: 6px;
       }
     }
   }

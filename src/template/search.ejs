@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>全站搜索_{dede:global.cfg_webname/}</title>
+  <meta name="keywords" content="{dede:field name='keywords'/}" />
+  <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+</head>
+<body>
+  <%-include ../public/header.ejs%>
+  <%-include ../public/nbanner.ejs%>
+  <%-include ../public/search.ejs%>
+  <!-- 面包屑 -->
+  <div class="l-breadcrumb">
+    <div class="l-container">
+      您的位置：
+      <a href="/">首页</a> &gt;
+      <a href="javascript:void(0);">全站搜索</a>
+    </div>
+  </div>
+  <div class="l-searchpage">
+    <div class="l-container">
+      <h2 class="l-searchpage__header">
+        <span>搜索结果</span>
+      </h2>
+      <div class="l-searchpage__result">搜索 <strong>{dede:global name='keyword' function='RemoveXSS(@me)'/}</strong> 的结果 </div>
+      <ul class="l-seachpage__list">
+        {dede:list row="20"}
+        <li class="l-searchpage__item clearfix">
+          <a class="l-searchpage__pic" href="[field:arcurl/]">
+            <img src="[field:litpic/]" />
+          </a>
+          <div class="l-searchpage__main">
+            <a class="l-searchpage__title" href="[field:arcurl/]">[field:title/]</a>
+            <p class="l-searchpage__content">[field:description/]...</p>
+          </div>
+        </li>
+        {/dede:list}
+      </ul>
+      <ul class="page-list">
+        {dede:pagelist listsize='4'/}  
+      </ul>
+    </div>
+  </div>
+  <%-include ../public/footer.ejs%>
+</html>

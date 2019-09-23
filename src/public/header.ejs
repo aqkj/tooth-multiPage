@@ -1,53 +1,46 @@
 
+  <!-- 分类id -->
+  <input type="hidden" id="typeid" value="{dede:field.typeid/}" />
   <!-- 头部 -->
   <header class="l-header">
     <div class="l-header__top l-container clearfix">
       <div class="c-logo clearfix">
         <img src="<%=require('@/assets/logo.png')%>" alt="大同腾屹">
         <div class="c-logo__main">
-          <div class="c-logo__title">全行业温控设备整体方案提供商</div>
-          <div class="c-logo__desc">模温机定制与生产厂家</div>
+          <div class="c-logo__title">大同腾屹医疗器械有限公司</div>
+          <div class="c-logo__desc">个性化定制托槽</div>
         </div>
       </div>
       <div class="c-contact clearfix">
         <div class="c-contact__content">
           <div class="c-contact__tel">资讯热线 ：
-            <span class="c-contact__number">400-000-9261</span>
+            <span class="c-contact__number">{dede:global.tel_one/}</span>
           </div>
           <div class="c-contact__tel">技术支持 ：
-            <span class="c-contact__number">151 9595 6304</span>
+            <span class="c-contact__number">{dede:global.tel_two/}</span>
           </div>
         </div>
-        <img class="c-contact__qrcode" src="<%=require('@/assets/qrcode.png')%>" alt="客服二维码"/>
+        <img class="c-contact__qrcode" width="98" height="98" src="<%=require('@/assets/contact-qrcode.png')%>" alt="客服二维码"/>
       </div>
     </div>
     <div class="l-header__bottom">
       <nav class="c-nav l-container clearfix">
-        <a class="c-nav__item c-nav__item--active" href="/index.htm">
+        <a class="c-nav__item" href="/">
           <i class="c-nav__icon"></i>
           <span class="c-nav__text">腾屹首页</span>
         </a>
-        <a class="c-nav__item" href="/list_product.htm">
-          <span class="c-nav__text">正畸托槽</span>
+        {dede:channel type="top" currentstyle="<a class='c-nav__item c-nav__item--active' data-id='~id~' href='~typelink~'><span class='c-nav__text'>~typename~</span></a></li>"}
+        <a class="c-nav__item" data-id="[field:id/]" href="[field:typelink/]">
+          <span class="c-nav__text">[field:typename/]</span>
         </a>
-        <a class="c-nav__item" href="/index_about_profile.htm">
-          <span class="c-nav__text">关于我们</span>
-        </a>
-        <a class="c-nav__item" href="/index_about_contact.htm">
-          <span class="c-nav__text">联系我们</span>
-        </a>
-        <a class="c-nav__item" href="/index_proxy.htm">
-          <span class="c-nav__text">招代理</span>
-        </a>
-        <a class="c-nav__item" href="/list_news.htm">
-          <span class="c-nav__text">正畸资讯</span>
-        </a>
-        <a class="c-nav__item" href="/list_about_expert.htm">
-          <span class="c-nav__text">正畸团队</span>
-        </a>
-        <a class="c-nav__item" href="/index_custom.htm">
-          <span class="c-nav__text">定制产品</span>
-        </a>
+        {/dede:channel}
       </nav>
     </div>
+    <script>
+      var path = '{dede:field.typename/}',
+          headerNavItems = document.querySelectorAll('.c-nav__item'); // 头部item
+      headerNavItems.forEach(function(item) {
+        console.log(item.innerText.trim())
+      })
+    </script>
   </header>

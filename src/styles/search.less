@@ -11,8 +11,12 @@
     font-size: 14px;
     // padding-left: 90px;
     float: left;
-    span{
+    a{
       margin-left: 12px;
+      color: #4c4c4c;
+      &:hover{
+        color: #1153a1;
+      }
     }
   }
   &__form{
@@ -23,12 +27,21 @@
       width: 278px;
       box-sizing: border-box;
       padding: 6px 10px;
-      background: url(../assets/icon-search.png) no-repeat 251px center #fff;
+      background-color: #fff;
       &__field{
         border: 0;
         font-size: 14px;
         height: 16px;
         outline: none;
+        width: 237px;
+      }
+      button{
+        outline: none;
+        border: 0;
+        box-shadow: none;
+        height: 18px;
+        background: url(../assets/icon-search.png) no-repeat left center / contain;
+        cursor: pointer;
       }
     }
   }

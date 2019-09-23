@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>首页</title>
+  <title>{dede:global.cfg_indexname/}_{dede:global.cfg_webname/}</title>
+  <meta name="keywords" content="{dede:global name='keywords'/}" />
+  <meta name="description" content="{dede:global name='description' function='html2text(@me)'/}" />
+  <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 </head>
 <body>
   <%-include ../public/header.ejs%>
@@ -23,10 +26,10 @@
   <!-- 优势 -->
   <div class="l-advantage">
     <div class="l-container">
-      <h2 class="l-advantage__header">
+      <h2 class="l-advantage__header fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
         <strong>智能+节能</strong> 我们始终的坚守
       </h2>
-      <ul class="l-advantage__list clearfix">
+      <ul class="l-advantage__list clearfix fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
         <li class="l-advantage__item">
           <i class="l-advantage__icon"></i>
           <div class="l-advantage__title">设计中心</div>
@@ -54,52 +57,32 @@
   <div class="l-product">
     <div class="l-container">
       <div class="l-container__main">
-        <div class="l-container__header">
+        <div class="l-container__header fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
           <h2 class="l-container__title">
               腾屹产品中心
           </h2>
           <p class="l-container__subtitle">按客户需求进行设计与定制生产</p>
         </div>
       </div>
-      <ul class="l-product__list clearfix">
+      <ul class="l-product__list clearfix fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
+        {dede:arclist typeid="1"}
         <li class="l-product__item">
           <a class="l-product-main">
             <div class="l-product__img">
-              <img src="<%=require('@/assets/product-item.png')%>"/>
+              <img src="[field:litpic/]"/>
             </div>
             <div class="l-product__label">
-              <span>合金矫正器</span>
-              <a class="l-product__link"></a>
+              <span>[field:title/]</span>
+              <a class="l-product__link" href="[field:arcurl/]"></a>
             </div>
           </a>
         </li>
-        <li class="l-product__item">
-          <a class="l-product-main">
-            <div class="l-product__img">
-              <img src="<%=require('@/assets/product-item.png')%>"/>
-            </div>
-            <div class="l-product__label">
-              <span>合金矫正器</span>
-              <a class="l-product__link"></a>
-            </div>
-          </a>
-        </li>
-        <li class="l-product__item">
-          <a class="l-product-main">
-            <div class="l-product__img">
-              <img src="<%=require('@/assets/product-item.png')%>"/>
-            </div>
-            <div class="l-product__label">
-              <span>合金矫正器</span>
-              <a class="l-product__link"></a>
-            </div>
-          </a>
-        </li>
+        {/dede:arclist}
       </ul>
     </div>
   </div>
   <!-- 合作客户 -->
-  <div class="l-partner">
+  <div class="l-partner fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
     <div class="l-container">
       <div class="l-container__main">
         <div class="l-container__header">
@@ -115,15 +98,17 @@
           <ul class="l-partner__list clearfix">
             <% Array(5).fill(null).forEach(item => {%>
             <li class="l-partner__item">
-              <img class="l-partner__item__img" src="<%=require('@/assets/partner-logo.png')%>" alt="欧普照明" />
+              <div class="l-partner__item__img">
+                <img src="<%=require('@/assets/partner-logo.png')%>" _src="<%=require('@/assets/partner-logo.png')%>" alt="欧普照明" />
+              </div>
               <span class="l-partner__item__label">欧普照明</span>
             </li>
             <%});%>
           </ul>
-        </div>
-        <div class="l-partner__tabs">
-          <div class="l-partner__tabs__item l-partner__tabs__item--left"></div>
-          <div class="l-partner__tabs__item l-partner__tabs__item--right"></div>
+          <div class="l-partner__tabs">
+            <div class="l-partner__tabs__item l-partner__tabs__item--left prev"></div>
+            <div class="l-partner__tabs__item l-partner__tabs__item--right next"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -131,11 +116,11 @@
   <!-- 定制 -->
   <div class="l-custom">
     <div class="l-container">
-      <h2 class="l-custom__header">
+      <h2 class="l-custom__header fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
         <strong>私人订制文案</strong> 腾屹客户专属服务
       </h2>
-      <div class="l-custom__main">
-        <div class="l-custom__item l-custom__item-first">
+      <div class="l-custom__main fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
+        <div class="l-custom__item l-custom__item-first fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
           <div class="l-custom__item__header clearfix">
             <div class="l-custom__item__number">01</div>
             <div class="l-custom__item__title">
@@ -144,13 +129,13 @@
             </div>
           </div>
           <div class="l-custom__item__content">
-            <p class="l-custom__item__content__item">如您在正畸过程中遇到问题，我们的专家团队会及时为您解答，学习的过程中，也能增加收益。</p>
+            <p class="l-custom__item__content__item fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">如您在正畸过程中遇到问题，我们的专家团队会及时为您解答，学习的过程中，也能增加收益。</p>
           </div>
-          <div class="l-custom__item__pic">
+          <div class="l-custom__item__pic fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
             <img src="<%=require('@/assets/custom-pic1.png')%>" alt="私人订制"/>
           </div>
         </div>
-        <div class="l-custom__item l-custom__item-second">
+        <div class="l-custom__item l-custom__item-second fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
           <div class="l-custom__item__header clearfix">
             <div class="l-custom__item__number">02</div>
             <div class="l-custom__item__title">
@@ -158,10 +143,10 @@
               <span>Conduct online or offline training from time to time</span>
             </div>
           </div>
-          <div class="l-custom__item__content">
-            <p class="l-custom__item__content__item">一线临床经验丰富的老师授课，手把手教学，边学边实践，让您的理论学习和临床病例完美相结合。</p>
+          <div class="l-custom__item__content fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
+            <p class="l-custom__item__content__item fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">一线临床经验丰富的老师授课，手把手教学，边学边实践，让您的理论学习和临床病例完美相结合。</p>
           </div>
-          <div class="l-custom__item__pic">
+          <div class="l-custom__item__pic fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
             <img src="<%=require('@/assets/custom-pic4.png')%>" alt="私人订制"/>
           </div>
         </div>
@@ -172,112 +157,115 @@
   <div class="l-service">
     <div class="l-container">
       <div class="l-container__main">
-        <div class="l-container__header">
+        <div class="l-container__header fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
           <h2 class="l-container__title">
               腾屹核心服务
           </h2>
           <p class="l-container__subtitle">效力为用户提供满意的温控设备解决方案</p>
         </div>
       </div>
-      <ul class="l-service__list clearfix">
+      <ul class="l-service__list clearfix fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
         <li class="l-service__item">
           <img class="l-service__item__img" src="<%=require('@/assets/service-img.png')%>" alt="腾屹核心服务" />
           <div class="l-service__item__bar"></div>
-          <div class="l-service__item__title">工艺流程诊断</div>
-          <div class="l-service__item__content">专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职。</div>
+          <div class="l-service__item__title">技术团队</div>
+          <div class="l-service__item__content">我们有强大的首医教授专家医疗团队，专注于口腔正畸领域。</div>
         </li>
         <li class="l-service__item l-service__item--even">
-          <div class="l-service__item__title">工艺流程诊断</div>
-          <div class="l-service__item__content">专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职。</div>
+          <div class="l-service__item__title">矫治周期</div>
+          <div class="l-service__item__content">缩短较之治疗周期四分之一以上，24小时持续轻力矫治。</div>
           <div class="l-service__item__bar"></div>
-          <img class="l-service__item__img" src="<%=require('@/assets/service-img.png')%>" alt="腾屹核心服务" />
+          <img class="l-service__item__img" src="<%=require('@/assets/service-img2.png')%>" alt="腾屹核心服务" />
         </li>
         <li class="l-service__item">
-          <img class="l-service__item__img" src="<%=require('@/assets/service-img.png')%>" alt="腾屹核心服务" />
+          <img class="l-service__item__img" src="<%=require('@/assets/service-img3.png')%>" alt="腾屹核心服务" />
           <div class="l-service__item__bar"></div>
-          <div class="l-service__item__title">工艺流程诊断</div>
-          <div class="l-service__item__content">专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职。</div>
+          <div class="l-service__item__title">目标导向</div>
+          <div class="l-service__item__content">唇倾、舌侧矫治或上颌舌侧、下颌唇倾多方案搭配，以目标为导向。</div>
         </li>
         <li class="l-service__item l-service__item--even">
-          <div class="l-service__item__title">工艺流程诊断</div>
-          <div class="l-service__item__content">专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职。</div>
+          <div class="l-service__item__title">效果显著</div>
+          <div class="l-service__item__content">对牙齿控制效果更好，除排齐牙齿以外，还能更好的维持或改变面型。</div>
           <div class="l-service__item__bar"></div>
-          <img class="l-service__item__img" src="<%=require('@/assets/service-img.png')%>" alt="腾屹核心服务" />
+          <img class="l-service__item__img" src="<%=require('@/assets/service-img4.png')%>" alt="腾屹核心服务" />
         </li>
         <li class="l-service__item">
-          <img class="l-service__item__img" src="<%=require('@/assets/service-img.png')%>" alt="腾屹核心服务" />
+          <img class="l-service__item__img" src="<%=require('@/assets/service-img5.png')%>" alt="腾屹核心服务" />
           <div class="l-service__item__bar"></div>
-          <div class="l-service__item__title">工艺流程诊断</div>
-          <div class="l-service__item__content">专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职专职。</div>
+          <div class="l-service__item__title">先进设备</div>
+          <div class="l-service__item__content">腾屹口腔引进先进的生产设备，让矫治更加精准高效。</div>
         </li>
       </ul>
     </div>
   </div>
   <!-- 咨询我们 -->
-  <div class="l-advisory">
+  <div class="l-advisory fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
     <div class="l-advisory__main">
       <i class="l-advisory__icon"></i>
-      <div class="l-advisory__content">咨询我们 : 
-        <span class="l-advisory__phone">400-000-9261</span>
+      <div class="l-advisory__content fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">咨询我们 : 
+        <span class="l-advisory__phone">{dede:global.tel_one/}</span>
       </div>
     </div>
   </div>
   <!-- 资讯 -->
-  <div class="l-infomation">
+  <div class="l-infomation fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
     <div class="l-container clearfix">
       <div class="l-infomation__news">
-        <div class="l-infomation__header clearfix">
+        <div class="l-infomation__header clearfix fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
           <i class="l-infomation__header__icon l-infomation__header__icon--news"></i>
           <div class="l-infomation__header__title">腾屹动态
             <span>/ news</span>
           </div>
         </div>
-        <%Array(3).fill(null).forEach(() => {%>
-        <a class="l-infomation__news__item clearfix">
+        {dede:arclist typeid="16" pagesize="3"}
+        <a class="l-infomation__news__item clearfix fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0" href="[field:arcurl/]">
           <div class="l-infomation__news__date">
-            <span class="l-infomation__news__date__day">17</span>
-            <span class="l-infomation__news__date__month">2019-11</span>
+            <span class="l-infomation__news__date__day">[field:pubdate function="MyDate('d',@me)"/]</span>
+            <span class="l-infomation__news__date__month">[field:pubdate function="MyDate('Y-m',@me)"/]</span>
           </div>
           <div class="l-infomation__news__content">
-            <div class="l-infomation__news__title">网站发布了，发布了</div>
-            <p class="l-infomation__news__desc">网站发布了网站发布了网站发布了网站发布了</p>
+            <div class="l-infomation__news__title">[field:title/]</div>
+            <p class="l-infomation__news__desc">[field:description function="cn_substr(@me,255)"/]</p>
           </div>
         </a>
-        <%});%>
+        {/dede:arclist}
       </div>
       <div class="l-infomation__question">
-        <div class="l-infomation__header clearfix">
+        <div class="l-infomation__header clearfix fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
           <i class="l-infomation__header__icon l-infomation__header__icon--question"></i>
           <div class="l-infomation__header__title">常见问题
             <span>/ faq</span>
           </div>
         </div>
-        <img class="l-infomation__question__pic" src="<%=require('@/assets/infomation-question-img.png')%>" />
-        <%Array(2).fill(null).forEach(() => {%>
-        <div class="l-infomation__question__item">
+        <img class="l-infomation__question__pic fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0" src="<%=require('@/assets/infomation-question-img.png')%>" />
+        {dede:arclist typeid="17" pagesize="2"}
+        <div class="l-infomation__question__item fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
           <span class="l-infomation__question__icon">Q</span>
-          <div class="l-infomation__question__title">网站发布了网站发布了网站发布了网站发布了</div>
-          <p class="l-infomation__question__desc">网站发布了网站发布了网站发布了网站发布了</p>
+          <a class="l-infomation__question__title" href="[field:arcurl/]">[field:title/]</a>
+          <p class="l-infomation__question__desc">[field:description function="cn_substr(@me,255)"/]</p>
         </div>
-        <%});%>
+        {/dede:arclist}
       </div>
     </div>
   </div>
   <!-- 资质 -->
   <div class="l-qualification">
     <div class="l-container clearfix">
-      <div class="l-qualification__header">资质与专利</div>
-      <div class="l-qualification__main">
+      <div class="l-qualification__header fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">资质与专利</div>
+      <div class="l-qualification__main fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
         <ul class="l-qualification__list clearfix">
-          <%Array(8).fill(null).forEach(() => {%>
+          {dede:arclist typeid="8"}
           <li class="l-qualification__item">
-            <img src="<%=require('@/assets/qualification-img.png')%>" alt="资质与专利" />
+            <img src="[field:litpic/]" alt="[field:title/]" width="125" height="168" />
           </li>
-          <%});%>
+          {/dede:arclist}
         </ul>
       </div>
     </div>
   </div>
   <%-include ../public/footer.ejs%>
+  <script src="/templets/yiliao/static/jquery.min.js"></script>
+  <script src="/templets/yiliao/static/supersilder.js"></script>
+  <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
 </body>
 </html>

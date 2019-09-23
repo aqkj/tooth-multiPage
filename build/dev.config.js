@@ -5,11 +5,13 @@
  */
 const merge = require('webpack-merge')
 const baseConfig = require('./base.config')
+const path = require('path')
 const HtmlReloadWebpackPlugin = require('@zouzhiqiang/html-reload-webpack-plugin')
 module.exports = merge(baseConfig, {
   mode: 'development',
   output: {
     // publicPath: '/sss'
+    // path: path.resolve(__dirname, '../dist')
   },
   module: {
     rules: [{
@@ -39,12 +41,5 @@ module.exports = merge(baseConfig, {
     hot: true,
     inline: true,
     overlay: true
-  },
-  stats: {
-    all: false,
-    builtAt: true,
-    warnings: true,
-    errors: true,
-    env: true
   }
 })

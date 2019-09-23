@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>招代理</title>
+  <title>{dede:field.seotitle /}_{dede:field.title/}_{dede:global.cfg_webname/}</title>
+  <meta name="keywords" content="{dede:field name='keywords'/}" />
+  <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
 </head>
 <body>
   <%-include ../../public/header.ejs%>

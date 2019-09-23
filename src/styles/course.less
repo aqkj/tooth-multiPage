@@ -34,7 +34,8 @@
     }
     &__list{
       position: absolute;
-      padding-top: 10px;
+      padding-top: 10px !important;
+      height: 130px !important;
       // width: 100%;
       left:0;
       width: 9990px;
@@ -45,7 +46,7 @@
 
     }
     &__item{
-      width: 188px;
+      width: 208px;
       height: 100%;
       float: left;
       &>a{
@@ -58,6 +59,7 @@
           color: #535353;
           display: block;
           padding-bottom: 54px;
+          transition: all .5s ease;
         }
         &::before{
           background: url(../assets/course-location.png) no-repeat left top / contain;
@@ -78,7 +80,17 @@
           display: block;
           content: '';
           margin: 0 auto;
+          transition: all .5s ease;
           // position: absolute;
+        }
+        &:hover{
+          /* stylelint-disable no-descending-specificity*/
+          span{
+            color: #1153a1;
+          }
+          &::after{
+            background-color: #1153a1;
+          }
         }
       }
       &--active{
@@ -99,6 +111,7 @@
         height: 41px;
         position: absolute;
         bottom:12px;
+        cursor: pointer;
         &--left{
           left:0;
           background: url(../assets/course-arrow.png) no-repeat left top / contain;

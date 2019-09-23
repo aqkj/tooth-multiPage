@@ -57,6 +57,28 @@ a{
     color: #898989;
   }
 }
+.page-list{
+  text-align: center;
+  padding: 40px;
+  font-size: 0;
+  li{
+    font-size: 14px;
+    display: inline-block;
+    color: #4a4a4a;
+    margin-right: 10px;
+    a{
+      color: #4a4a4a;
+      padding: 10px 10px;
+      background-color: #eee;
+    }
+    &.thisclass{
+      a{
+        background-color: #1153a1;
+        color: #fff;
+      }
+    }
+  }
+}
 .clearfix{
   &::after,&::before{
     height: 0;

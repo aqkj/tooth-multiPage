@@ -6,8 +6,11 @@
     "reset-css": "^4.0.1"
   },
   "devDependencies": {
-    "@zouzhiqiang/html-reload-webpack-plugin": "^0.0.2",
+    "@zouzhiqiang/ejs-loader": "^0.0.3",
+    "@zouzhiqiang/html-reload-webpack-plugin": "^0.1.0",
+    "@zouzhiqiang/prevent-loader": "^0.0.2",
     "@zouzhiqiang/tslint-config": "^0.0.4",
+    "@zouzhiqiang/upload-ftp-webpack-plugin": "^0.0.1",
     "autoprefixer": "^9.6.1",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.4",
@@ -29,6 +32,7 @@
     "ts-lint": "^4.5.1",
     "ts-loader": "^6.0.4",
     "typescript": "^3.6.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
@@ -37,7 +41,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config=build/dev.config.js --env=development",
+    "dev": "webpack --config=build/prod.config.js --env=development",
     "build": "webpack --config=build/prod.config.js --env=production"
   },
   "keywords": [],

@@ -6,6 +6,20 @@
 .l-footer{
   background-color: #202020;
   overflow: hidden;
+  &__topnav{
+    &__item{
+      color: #d7d7d7;
+      display: block;
+      float: left;
+      width: 10%;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
   &__friendlink{
     border: 1px solid #323232;
     margin-top: 17px;
@@ -15,13 +29,18 @@
     color: #878787;
     line-height: 40px;
     font-size: 14px;
-    &__item{
+    a{
       margin-left: 19px;
       color: #878787;
+      // transition: all .5s ease;
+      &:hover{
+        color: #fff;
+        // text-decoration: underline;
+      }
     }
   }
   &__nav{
-    padding: 38px 0 0 24px;
+    padding: 38px 0 0 0;
     &__item{
       padding-right: 55px;
       float: left;
@@ -49,6 +68,13 @@
         font-size: 12px;
         line-height: 12px;
         padding-bottom: 16px;
+        /* stylelint-disable no-descending-specificity */
+        a{
+          color: #999;
+          &:hover{
+            color: #fff;
+          }
+        }
       }
     }
     &__qrcode{

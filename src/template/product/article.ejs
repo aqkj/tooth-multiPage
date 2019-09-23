@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>产品详情</title>
+  <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+  <meta name="keywords" content="{dede:field name='keywords'/}" />
+  <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
 </head>
 <body>
   <%-include ../../public/header.ejs%>
@@ -17,26 +19,26 @@
     <div class="l-leftnav">
       <h2 class="l-leftnav__title">正畸矫正</h2>
       <div class="l-leftnav__list">
-        <%Array(2).fill(null).forEach(() => {%>
-        <div class="l-leftnav__item">
-          <a class="l-leftnav__item__label" href="javascript:void(0);">产品分类</a>
+        {dede:channelartlist typeid="1"}
+        <div class="l-leftnav__item" data-id="{dede:field.id/}">
+          <a class="l-leftnav__item__label" href="{dede:field.typeurl/}">{dede:field.typename/}</a>
           <div class="l-leftnav__item__children">
-            <%Array(5).fill(null).forEach(() => {%>
-            <a class="l-leftnav__item__children__item" href="#">产品分类</a>
-            <%});%>
+            {dede:channelarttlist}
+            <a class="l-leftnav__item__children__item" href="{dede:field.typeurl/}" data-id="{dede:field.id/}">{dede:field.typename/}</a>
+            {/dede:channelarttlist}
           </div>
         </div>
-        <%});%>
+        {/dede:channelartlist}
       </div>
       <div class="l-leftnav__contact">
         <span>资讯热线</span>
-        <p>400-000-9261</p>
+        <p>{dede:global.tel_one/}</p>
       </div>
     </div>
     <!-- 右侧容器 -->
     <div class="l-rightbody">
       <div class="l-rightbody__title">
-        <span>正畸矫正</span>
+        <span>{dede:field.typename/}</span>
       </div>
       <div class="l-product">
         <!-- 产品容器 -->
@@ -44,41 +46,36 @@
           <!-- 产品图片 -->
           <div class="l-product__imgs">
             <ul class="l-product__imgs__list clearfix">
+              {dede:productimagelist}
               <li class="l-product__imgs__item">
-                <img src="<%=require('@/assets/product-item.png')%>" alt="产品详情"/>
+                <img src="[field:imgsrc/]" alt="[field:text/]"/>
               </li>
-              <li class="l-product__imgs__item">
-                <img src="<%=require('@/assets/product-item.png')%>" alt="产品详情"/>
-              </li>
+              {/dede:productimagelist}
             </ul>
             <div class="l-product__imgs__tab">
-              <div class="l-product__imgs__tab__item l-product__imgs__tab__item--left"></div>
-              <div class="l-product__imgs__tab__item l-product__imgs__tab__item--right"></div>
+              <div class="l-product__imgs__tab__item l-product__imgs__tab__item--left prev"></div>
+              <div class="l-product__imgs__tab__item l-product__imgs__tab__item--right next"></div>
             </div>
-            <div class="l-product__imgs__page">1/1</div>
+            <div class="l-product__imgs__page pageState">1/1</div>
           </div>
           <!-- 产品描述 -->
           <div class="l-product__main">
             <h2 class="l-product__title">产品名称</h2>
             <div class="l-product__info">
-              <p class="l-product__info__item">产品型号: xxxxxx</p>
-              <p class="l-product__info__item">产品型号: xxxxxx</p>
-              <p class="l-product__info__item">产品型号: xxxxxx</p>
-              <p class="l-product__info__item">产品型号: xxxxxx</p>
-              <p class="l-product__info__item">产品型号: xxxxxx</p>
+              {dede:field.sku/}
             </div>
             <div class="l-product__contact clearfix">
               <div class="l-product__contact__phone">
-                <span>咨询热线</span>XXXXXXXXXXXXX
+                <span>咨询热线</span>{dede:global.tel_one/}
               </div>
-              <button type="button" class="l-product__contact__btn">在线咨询</button>
+              <a type="button" target="__blank" href="http://wpa.qq.com/msgrd?v=3&uin={dede:gloabl.qq/}&site=qq&menu=yes" class="l-product__contact__btn">在线咨询</a>
             </div>
           </div>
         </div>
         <!-- 产品介绍 -->
         <div class="l-product__content">
           <div class="l-product__subtitle">产品介绍</div>
-          <p>产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍</p>
+          <p>{dede:field.body/}</p>
         </div>
         <!-- 厂家承诺 -->
         <div class="l-product__content">
@@ -91,30 +88,31 @@
           <p>服务宗旨：专业、快速、周到、准确 </p>
           <p>服务目标：服务质量达到客户满意。 </p>
           <p>服务效率：接到售后电话，技术售后人员将在3个小时内给客户详细的电话指导解决方案，如不能消除故障，24小时内准时抵达用户工厂并开始维修！</p>
-          <form class="l-product__form">
+          <form class="l-product__form" action="/mail/sendmail.php" method="POST">
+            <input type="hidden" name="demand" value="采购意向" />
             <div class="l-product__form__item">
               <span>联系人：</span>
-              <input class="l-product__form__input" type="text">
+              <input class="l-product__form__input" name="name" type="text">
             </div>
             <div class="l-product__form__item">
               <span>手机：</span>
-              <input class="l-product__form__input" type="text">
+              <input class="l-product__form__input" name="phone" type="text">
             </div>
             <div class="l-product__form__item">
               <span>公司名称：</span>
-              <input class="l-product__form__input" type="text">
+              <input class="l-product__form__input" name="company" type="text">
             </div>
             <div class="l-product__form__item">
               <span>邮箱：</span>
-              <input class="l-product__form__input" type="text">
+              <input class="l-product__form__input" name="email" type="text">
             </div>
             <div class="l-product__form__item">
               <span>采购意向：</span>
-              <textarea class="l-product__form__textarea"></textarea>
+              <textarea class="l-product__form__textarea" name="message"></textarea>
             </div>
             <div class="l-product__form__btn-group">
               <button type="submit">提交</button>
-              <button type="reset">充填</button>
+              <button type="reset">重填</button>
             </div>
           </form>
         </div>
@@ -122,4 +120,6 @@
     </div>
   </div>
   <%-include ../../public/footer.ejs%>
+  <script src="/templets/yiliao/static/jquery.min.js"></script>
+  <script src="/templets/yiliao/static/supersilder.js"></script>
 </html>

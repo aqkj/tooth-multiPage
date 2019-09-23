@@ -46,7 +46,7 @@
   }
   &__item{
     width: 380px;
-    height: 174px;
+    // height: 174px;
     border: 2px solid #ececec;
     margin-right: 24px;
     padding: 28px;
@@ -74,8 +74,12 @@
       margin-right: 9px;
       border: 1px solid #e3e2e3;
       float: left;
+      transition: all .5s ease;
       &:last-child{
         margin-right: 0;
+      }
+      &:hover{
+        border-color: #1153a1;
       }
     }
     &__pic{
@@ -84,6 +88,7 @@
       display: block;
       position: relative;
       background-color: #f9f5fb;
+      overflow: hidden;
       img{
         max-width: 100%;
         max-height: 100%;
@@ -101,6 +106,9 @@
       display: block;
       color: #585858;
       padding-bottom: 14px;
+      &:hover{
+        color: #1153a1;
+      }
     }
     &__desc{
       font-size: 14px;
