@@ -55,7 +55,6 @@ module.exports = (env, args) => {
         sourceMap: false,
         parallel: true,
       }),
-      // new CleanWebpackPlugin(),
       new CopyWebpackPlugin([{
         from: path.resolve(__dirname, '../static'),
         to: path.resolve(__dirname, '../../templets/yiliao/static')
@@ -81,6 +80,9 @@ module.exports = (env, args) => {
     }
   })
   if (env === 'production') {
+    config.plugins.push(
+      new CleanWebpackPlugin()
+    )
     // 添加上传插件
     config.plugins.push(
       new UploadFtpWebpackPlugin({

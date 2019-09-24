@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 const fs = require('fs')
 /**
- * 获取入口
+ * 获取模版入口
  */
 function mapEntrys(dir, baseName) {
   // 获取文件目录
@@ -39,8 +39,14 @@ function mapEntrys(dir, baseName) {
 }
 // 获取入口
 const entrys = mapEntrys('./src/template') || {}
+// 移动端入口
+const mTempEntrys = mapEntrys('./src/mobile')
+const mEntrys = {}
+Object.keys(mTempEntrys).map(key => {
+  mEntrys[key + '_m'] = mTempEntrys[key]
+})
 const config =  {
-  entry: entrys,
+  entry: Object.assign({}, entrys, mEntrys),
   module: {
     rules: [{
       test: /.ts$/,
@@ -89,12 +95,20 @@ const config =  {
     env: true
   }
 }
-// 生成html
+// 生成pc端html
 config.plugins = config.plugins.concat(Object.keys(entrys).map((key) => (
   new HtmlWebpackPlugin({
     filename: `${key}.htm`,
     template: entrys[key].replace(path.extname(entrys[key]), '.ejs'),
     chunks: [key, 'commons', 'vendor']
+  })
+)))
+// 生成移动端html
+config.plugins = config.plugins.concat(Object.keys(mEntrys).map((key) => (
+  new HtmlWebpackPlugin({
+    filename: `${key}.htm`,
+    template: mEntrys[key].replace(path.extname(mEntrys[key]), '.ejs'),
+    chunks: [key]
   })
 )))
 module.exports = config
